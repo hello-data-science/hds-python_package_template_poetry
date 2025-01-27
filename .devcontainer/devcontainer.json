@@ -1,7 +1,7 @@
 {
     "name": "Poetry Python Package Devcontainer",
     "build": {
-        "dockerfile": "../Dockerfile"
+        "dockerfile": "../dockerfile"
     },
     "extensions": [
         "ms-python.python",
