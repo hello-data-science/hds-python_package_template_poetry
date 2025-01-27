@@ -58,6 +58,8 @@ quarto render
 
 After creating a new repository from this template:
 
+> Alternatively, replace steps 1 and 2 by clicking 'Use this template' in this repository, then select 'Open in a codespace' to try it out directly in your browser.
+
 1. Clone your repository and open in VSCode
    ```bash
    git clone <your-repo-url>
@@ -68,43 +70,58 @@ After creating a new repository from this template:
 
 3. Initialize your Poetry project (update with your details)
    ```bash
-   poetry init --name your-package-name \
-               --description "Your package description" \
-               --author "Your Name <your.email@example.com>" \
-               --python "^3.8" \
-               --dependency python="^3.8" \
-               --dev-dependency pytest="^7.0" \
-               --dev-dependency quartodocs="^0.1.0" \
-               -n
+   poetry init --name hellopy \
+            --description "Your package description" \
+            --author "Your Name <your.email@example.com>" \
+            --python "^3.11" \
+            -n
    ```
 
 4. Create initial package structure
    ```bash
-   touch __init__.py
+   mkdir hellopy && \
+   touch hellopy/__init__.py && \
+   touch hellopy/hello.py
    ```
 
-5. Add core dependencies for development
+5. Populate `hello.py` with the following
+   ```python
+    def hello():
+        """
+        Print a greeting message.
+
+        Example usage:
+        ```{python}
+        from hellopy.hello import hello
+        hello()
+        ```
+        """
+        print("Hello!")
+   ```
+
+6. Install your package in editor mode, add IPython and Jupyter to aid development, and activate virtual 
+    ```bash
+    poetry install && \
+    poetry add --group dev ipython jupyter
+    ```
+
+7. Activate virtual environment
    ```bash
-   poetry add --group dev pytest pytest-cov black isort mypy pylint pre-commit
+   source .venv/bin/activate
    ```
 
-6. Create basic test structure
+8. Start Ipython (or an interactive Jupyter window)
    ```bash
-   mkdir tests
-   touch tests/__init__.py
-   touch tests/test_basic.py
+   ipython
    ```
 
-7. Initialize git pre-commit hooks
-   ```bash
-   pre-commit install
-   ```
+9.  In Ipython, import `hello()`
+    ```python
+    from hellopy.hello import hello
+    ```
 
-8. Start developing your package!
-
-Your project is now set up with:
-- Poetry for dependency management
-- pytest for testing
-- Code quality tools (black, isort, mypy, pylint)
-- pre-commit hooks for consistent code quality
-- Quarto for documentation
+10. Enjoy developing your package!
+    ```python
+    # Try editing `hello.py` and re-running the `hello()` command
+    hello()
+    ```
