@@ -1,6 +1,6 @@
 ![Work in Progress](https://img.shields.io/badge/Status-WIP-yellow)
 ![Template](https://img.shields.io/badge/Template-blue)
-![Python](https://img.shields.io/badge/Python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue)
+![Python](https://img.shields.io/badge/Python-3.9%20%7C%203.11-blue)
 ![Poetry](https://img.shields.io/badge/Poetry-Package%20Manager-blue)
 
 # Python Package Template
