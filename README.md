@@ -16,12 +16,18 @@ A template repository for developing Python packages using Poetry in a VSCode de
 
 ## Quick Start
 
+**Pre-requisites:** Ensure you have the following installed on your system: [Visual Studio Code (VSCode)](https://code.visualstudio.com/) and [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
 1. Click "Use this template" to create a new repository
 2. Clone your new repository
 3. Open in VSCode with devcontainer extension
-4. VSCode will prompt to reopen in container - accept this
+4. VSCode will prompt to reopen in container - accept this (will take a few minutes)
+
+> Alternatively, click 'Use this template' in this repository, then select 'Open in a codespace' to try it out directly in your browser.
 
 ## Project Setup
+
+Open a terminal in your container workspace and run the following:
 
 1. Initialize Poetry project:
 ```bash

@@ -50,7 +50,7 @@ RUN pip install --no-cache-dir pipx && \
     pipx install poetry
 
 # Install commonly used Python versions with pyenv for flexibility
-RUN pyenv install 3.8.10 && pyenv install 3.9.13 && pyenv install 3.10.5 && pyenv install 3.11.6
+RUN pyenv install 3.9.13 && pyenv install 3.11.6
 
 # Set a default global Python version (can be overridden by individual projects)
 RUN pyenv global 3.11.6
