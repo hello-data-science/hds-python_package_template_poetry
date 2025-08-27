@@ -37,7 +37,7 @@ poetry init
 2. Set up development dependencies:
 ```bash
 poetry add --group dev pytest
-poetry add --group dev quartodocs
+poetry add --group dev quartodoc
 ```
 
 3. Create your package structure:
